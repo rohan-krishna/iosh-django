@@ -5,9 +5,19 @@
 	<meta charset="UTF-8">
 	<title>Iosh | {% block 'title' %}{% endblock %} </title>
 	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+	<link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
 	<script src="{% static 'household/js/build/bundle.js' %}"></script>
 </head>
 <body>
+	<div class="row">
+		<div class="col-xs-12 col-sm-8 col-md-12 col-lg-12">
+			<h1>Welcome To --:: iosh ::-- </h1>
+		</div>
+	</div>
 	{% block 'content' %}
 	{% endblock %}
 </body>
