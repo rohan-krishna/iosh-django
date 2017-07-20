@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'household.apps.HouseholdConfig'
+    'household.apps.HouseholdConfig',
+    'journal.apps.JournalConfig',
 ]
 
 MIDDLEWARE = [
