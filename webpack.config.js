@@ -6,7 +6,7 @@ var APP_DIR = path.resolve(__dirname + '/source/asset/public');
 
 module.exports =  {
 	entry : {
-		main : APP_DIR + '/hello.jsx',
+		main : APP_DIR + '/app.js',
 	},
 	watch: true,
 	output: {

@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Notebooks } from './notebooks.jsx'
 
-class HelloWorld extends React.Component {
+export class HelloWorld extends React.Component {
 	render() {
-		return <p>Hello World -- Updated. ...</p>;
+		return (
+			<div>
+				<Notebooks></Notebooks>
+			</div>
+			);
 	}
 }
 
-window.onload = function() {
-	ReactDOM.render(<HelloWorld />, document.getElementById('app'));
-};
+ReactDOM.render(<HelloWorld />, document.getElementById('app')); 

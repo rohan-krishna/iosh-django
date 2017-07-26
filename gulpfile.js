@@ -11,6 +11,20 @@ gulp.task('build', function() {
 				.pipe(gulp.dest('household/static/household/js'))
 });
 
-gulp.task('watch', ['build'] , function() {
+gulp.task('build-css', function() {
+	return gulp.src("source/asset/public/sass/**/*.scss")
+				.pipe(sourcemaps.init())
+				.pipe(sass().on('error', sass.logError))
+				.pipe(sourcemaps.write())
+				.pipe(notify("Sass has been compiled!"))
+				.pipe(gulp.dest('household/static/household/css'));
+});
+
+gulp.task('watch', ['build','build-css'] , function() {
+	gulp.watch('source/asset/public/sass/**/*.scss',['build-css']);
 	gulp.watch('',['build']);
+});
+
+gulp.task('watch-css', ['build-css'], function() {
+	gulp.watch('source/asset/public/sass/**/*.scss', ['build-css']);
 });
